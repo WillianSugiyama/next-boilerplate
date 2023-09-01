@@ -6,6 +6,8 @@ type Props = {
   title: string
 }
 
+const bla = 'var'
+
 export default function Home({ title = 'Teste' }: Props) {
   return (
     <div className={styles.container}>
@@ -16,9 +18,7 @@ export default function Home({ title = 'Teste' }: Props) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          {title}
-        </h1>
+        <h1 className={styles.title}>{title}</h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
