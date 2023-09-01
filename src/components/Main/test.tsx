@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import Main from '.'
 
 describe('<Main />', () => {
@@ -11,5 +10,11 @@ describe('<Main />', () => {
     ).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should render the colors correctly', () => {
+    const { container } = render(<Main />)
+
+    expect(container.firstChild).toHaveStyleRule('background-color', '#0d1821')
   })
 })
